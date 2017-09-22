@@ -221,3 +221,85 @@ http://localhost:8080/designShop/trade/queryTrades
 
 **返回值：**
 {"code":0,"info":"查询成功","retObj":{"total":1,"pageSize":10,"trades":[{"addrId":1,"createTime":1505919323000,"number":1,"productId":1001,"tradeId":1001,"tradeStatus":"0","typeId":1001,"updateTime":1505919323000,"userId":1,"userName":"朱敬国"}],"pageNum":1}}
+
+##书籍类型接口文档##
+
+###1.添加类型###
+**地址：**
+http://localhost:8080/designShop/type/addType
+
+**入参：**
+{"typeName":"计算机","typeStatus":"0"}
+
+**返回值：**
+{"code":0,"info":"添加成功"}
+
+###2.修改类型###
+
+**地址：**
+http://localhost:8080/designShop/type/updateType
+
+**入参：**
+{"typeName":"计算机","typeStatus":"1","typeId":"1"}
+
+**返回值：**
+{"code":0,"info":"修改成功"}
+
+###3.条件查询类型###
+
+**地址：**
+http://localhost:8080/designShop/type/queryTypes
+
+**入参：**
+{"pageNum":"1","pageSize":"10","typeName":"计算机","typeStatus":"1"}
+
+**返回值：**
+{"code":0,"info":"查询成功","retObj":{"total":1,"pageSize":10,"types":[{"createTime":1506004594000,"typeId":1,"typeName":"计算机","typeStatus":"1","updateTime":1506004874000}],"pageNum":1}}
+
+
+##书籍接口文档##
+###1.添加书籍###
+**地址：**
+http://localhost:8080/designShop/book/addBook
+
+**入参：**
+{
+								"bookName":"JAVA入门到精通",
+								"bookDesc":"java",
+								"bookXprice":"100.0",
+								"typeId":"1",
+								"bookAuth":"java",
+								"bookImg":书籍路径,
+								"bookPublic":"中国邮电出版社",
+								"bookPublicTime":"2017-09",
+								"bookNum":"10"
+}
+
+**返回值：**
+{"code":0,"info":"添加成功"}
+
+###2.上传书籍图片###
+**地址：**
+http://localhost:8080/designShop/book/uploadPic
+
+**入参：**
+文件类型FormData
+
+**返回值：**
+{"path":"upload/1506069803248.jpg"}
+
+###3.条件查询书籍信息###
+**地址：**
+http://localhost:8080/designShop/book/queryBooks
+
+**入参：**
+{
+		"pageNum":"1",
+		"pageSize":"10",
+		"typeId":"",
+		"bookName":""
+}
+
+**返回值：**
+{"code":0,"info":"查询成功","retObj":{"total":1,"books":[{"bookAuth":"java","bookDesc":"java","bookImg":"upload/1506050829983.jpg","bookName":"JAVA入门到精通","bookNum":10,"bookPublic":"中国邮电出版社","bookPublicTime":1504195200000,"bookXprice":100,"bookYprice":100,"createTime":1506050830000,"productId":1001,"typeId":1,"updateTime":1506050830000}],"pageSize":10,"pageNum":1}}
+
