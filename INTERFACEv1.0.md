@@ -2,12 +2,13 @@
 
 ## 用户接口文档 ##
 
-###1.用户注册接口###
+### 1.用户注册接口 ###
 
 **地址：**
 http://localhost:8080/designShop/user/register
 
 **入参：**
+```
 {
 "userName":"朱敬国",
 "loginName":"zhujg",
@@ -16,12 +17,15 @@ http://localhost:8080/designShop/user/register
 "sex":"0",
 "tel":"15765517018"
 }
+```
 
 **返回值：**
+```
 {
 "code":0,
 "info":"注册成功!"
 }
+```
 
 ### 2.用户登录接口 ###
 
@@ -35,6 +39,7 @@ http://localhost:8080/designShop/user/login
 }
 
 **返回值：**
+```
 {
 "code": 0,
 "info": "登录成功！",
@@ -51,6 +56,7 @@ http://localhost:8080/designShop/user/login
 "userName": "朱敬国",
 "userStatus": "1"
 }
+```
 
 ### 3.修改用户接口 ###
 
@@ -58,12 +64,14 @@ http://localhost:8080/designShop/user/login
 http://localhost:8080/designShop/user/update
 
 **入参：**
+```
 {
 "userName":"朱敬国",
 "email":"15765517018@163.com",
 "tel":"15765517018",
 "sex":"1"
 }
+```
 
 **返回值：**
 {
@@ -302,4 +310,3 @@ http://localhost:8080/designShop/product/queryProducts
 
 **返回值：**
 {"code":0,"info":"查询成功","retObj":{"total":1,"products":[{"productAuth":"java","productDesc":"java","productImg":"upload/1506050829983.jpg","productName":"JAVA入门到精通","productNum":10,"bookPublic":"中国邮电出版社","productPublicTime":1504195200000,"productXprice":100,"productYprice":100,"createTime":1506050830000,"productId":1001,"typeId":1,"updateTime":1506050830000}],"pageSize":10,"pageNum":1}}
-
