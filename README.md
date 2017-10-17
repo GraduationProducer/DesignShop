@@ -200,7 +200,7 @@ http://localhost:8080/designShop/addr/delAddr
 {"code":0,"info":"删除成功"}
 ```
 
-##订单接口文档##
+## 订单接口文档 ##
 
 ###1.添加订单###
 
@@ -254,7 +254,8 @@ http://localhost:8080/designShop/trade/queryTrades
 ```
 {"code":0,"info":"查询成功","retObj":{"total":1,"pageSize":10,"trades":[{"addrId":1,"createTime":1505919323000,"number":1,"productId":1001,"tradeId":1001,"tradeStatus":"0","typeId":1001,"updateTime":1505919323000,"userId":1,"userName":"朱敬国"}],"pageNum":1}}
 ```
-##书籍类型接口文档##
+
+## 书籍类型接口文档 ##
 
 ###1.添加类型###
 **地址：**
@@ -281,7 +282,7 @@ http://localhost:8080/designShop/type/updateType
 ```
 {"code":0,"info":"修改成功"}
 ```
-###3.条件查询类型###
+### 3.条件查询类型 ###
 
 **地址：**
 http://localhost:8080/designShop/type/queryTypes
@@ -295,8 +296,8 @@ http://localhost:8080/designShop/type/queryTypes
 {"code":0,"info":"查询成功","retObj":{"total":1,"pageSize":10,"types":[{"createTime":1506004594000,"typeId":1,"typeName":"计算机","typeStatus":"1","updateTime":1506004874000}],"pageNum":1}}
 ```
 
-##书籍接口文档##
-###1.添加书籍###
+## 书籍接口文档 ##
+### 1.添加书籍 ###
 **地址：**
 http://localhost:8080/designShop/product/addProduct
 
@@ -318,7 +319,7 @@ http://localhost:8080/designShop/product/addProduct
 ```
 {"code":0,"info":"添加成功"}
 ```
-###2.上传书籍图片###
+### 2.上传书籍图片 ###
 **地址：**
 http://localhost:8080/designShop/product/uploadPic
 
@@ -329,8 +330,8 @@ http://localhost:8080/designShop/product/uploadPic
 ```
 {"path":"upload/1506069803248.jpg"}
 ```
-###3.条件查询书籍信息###
-**地址：**
+### 3.条件查询书籍信息 ###
+** 地址：**
 http://localhost:8080/designShop/product/queryProducts
 
 **入参：**
@@ -344,5 +345,24 @@ http://localhost:8080/designShop/product/queryProducts
 ```
 **返回值：**
 ```
-{"code":0,"info":"查询成功","retObj":{"total":1,"products":[{"productAuth":"java","productDesc":"java","productImg":"upload/1506050829983.jpg","productName":"JAVA入门到精通","productNum":10,"bookPublic":"中国邮电出版社","productPublicTime":1504195200000,"productXprice":100,"productYprice":100,"createTime":1506050830000,"productId":1001,"typeId":1,"updateTime":1506050830000}],"pageSize":10,"pageNum":1}}
+{
+	"code":0,
+	"info":"查询成功",
+	"retObj":{
+		"total":1,
+		"products":[{
+			"productAuth":"java",
+			"productDesc":"java",
+			"productImg":"upload/1506050829983.jpg",
+			"productName":"JAVA入门到精通",
+			"productNum":10,
+			"bookPublic":"中国邮电出版社",
+			"productPublicTime":1504195200000,
+			"productXprice":100,"productYprice":100,
+			"createTime":1506050830000,
+			"productId":1001,"typeId":1,
+			"updateTime":1506050830000}],
+			"pageSize":10,
+			"pageNum":1}
+		}
 ```
